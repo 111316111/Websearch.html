@@ -43,7 +43,9 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Value</th>
+        <th>Age</th>
+        <th>Birth of date</th>
+        <th>Blood type</th>
       </tr>
     </thead>
     <tbody id="data-table">
@@ -54,9 +56,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       // 模擬後端數據
       const data = [
-        { id: 1, name: 'Vicky', value: 32 },
-        { id: 2, name: 'Thousanf', value: 67 },
-        { id: 3, name: 'Corrino', value: 82 },
+        { id: 1, name: 'John Doe', age: 30, birthDate: '1993-01-01', bloodType: 'A' },
+        { id: 2, name: 'Jane Smith', age: 25, birthDate: '1998-05-12', bloodType: 'B' },
+        { id: 3, name: 'Bob Johnson', age: 35, birthDate: '1988-03-15', bloodType: 'O' },
       ];
 
       // 獲取表格的 tbody 元素
@@ -68,7 +70,9 @@
         row.innerHTML = `
           <td>${item.id}</td>
           <td>${item.name}</td>
-          <td>${item.value}</td>
+          <td>${item.age}</td>
+          <td>${item.birthDate}</td>
+          <td>${item.bloodType}</td>
         `;
         tableBody.appendChild(row);
       });
